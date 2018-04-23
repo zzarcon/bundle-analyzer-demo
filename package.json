@@ -1,0 +1,31 @@
+{
+  "name": "bundle-analyzer-demo",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "stats:create": "webpack --json > dist/stats.json",
+    "stats:show": "webpack-bundle-analyzer dist/stats.json",
+    "analyze": "yarn stats:create && yarn stats:show",
+    "build:prod": "webpack -p",
+    "uglify": "uglifyjs ./dist/bundle.js -o ./dist/rusha_uglified.js",
+    "serve": "serve"
+  },
+  "repository": "git@github.com:zzarcon/rusha-uglify-demo.git",
+  "author": "Hector Leon Zarco Garcia <hezarco@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@atlaskit/emoji": "^31.1.1",
+    "@atlaskit/media-core": "^14.0.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rxjs": "^5.5.6",
+    "serve": "^6.4.9",
+    "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.10.0"
+  }
+}
